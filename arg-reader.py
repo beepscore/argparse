@@ -16,9 +16,9 @@ def main():
                                     )
 
     parser.add_argument('-animalbig', action="store", dest="animalbig",
-                        help = 'name of student')
+                        help = 'name of a big animal')
     parser.add_argument('-animalsmall', action="store", dest="animalsmall",
-                        help = 'name of teacher')
+                        help = 'name of a small animal')
 
     arguments = parser.parse_args()
     print(arguments)
