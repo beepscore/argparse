@@ -17,6 +17,9 @@ class TestMultiplier(unittest.TestCase):
         [2,1,2],
         [1,2,2],
         [2,3,6],
+        [6,7,42],
+        [-6,7,-42],
+        [12,-5,-60],
     ]
 
     def setUp(self):
