@@ -7,16 +7,20 @@
 import argparse
 
 def main():
-    ''' use file as argument to read other arguments'''
+    '''
+    Read arguments from a file
+    '''
 
-    parser = argparse.ArgumentParser(description='argfile.py reads a file to set variables',
+    parser = argparse.ArgumentParser(description='Script reads arguments from a file. Type $ ./arg-reader.py @argsfilename e.g. $ ./arg-reader.py @args.txt',
                                     fromfile_prefix_chars='@',
                                     )
 
-    parser.add_argument('-arga', action="store", dest="arga")
-    parser.add_argument('-argb', action="store", dest="argb")
+    parser.add_argument('-arga', action="store", dest="arga",
+                        help = 'name of student')
+    parser.add_argument('-argb', action="store", dest="argb",
+                        help = 'name of teacher')
 
-    arguments = parser.parse_args(['@args.txt'])
+    arguments = parser.parse_args()
     print(arguments)
     print(arguments.arga)
     print(arguments.argb)
