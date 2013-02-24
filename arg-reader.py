@@ -15,15 +15,15 @@ def main():
                                     fromfile_prefix_chars='@',
                                     )
 
-    parser.add_argument('-arga', action="store", dest="arga",
+    parser.add_argument('-animalbig', action="store", dest="animalbig",
                         help = 'name of student')
-    parser.add_argument('-argb', action="store", dest="argb",
+    parser.add_argument('-animalsmall', action="store", dest="animalsmall",
                         help = 'name of teacher')
 
     arguments = parser.parse_args()
     print(arguments)
-    print(arguments.arga)
-    print(arguments.argb)
+    print(arguments.animalbig)
+    print(arguments.animalsmall)
 
 if __name__ == "__main__": main()
 

@@ -1,4 +1,4 @@
--arga
+-animalbig
 elephant
--argb
+-animalsmall
 badger
