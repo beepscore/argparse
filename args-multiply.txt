@@ -1,0 +1,4 @@
+-multiplicand
+6
+-multiplier
+4
