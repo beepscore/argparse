@@ -4,24 +4,35 @@ import multiplier
 import unittest
 
 class TestMultiplier(unittest.TestCase):
+
+    multiplicand_index = 0
+    multiplier_index = 1
+    expected_result_index = 2
+
+    test_datas = [
+        [0,0,0],
+        [1,0,0],
+        [0,1,0],
+        [1,1,1],
+        [2,1,2],
+        [1,2,2],
+        [2,3,6],
+    ]
+
     def setUp(self):
         pass
 
     def test_multiply(self):
-        a = 0
-        b = 0
-        expected_result = 0
-        # module multiplier, class Multiplier, method multiply(a, b)
-        result = multiplier.Multiplier.multiply(a, b)
-        self.assertEqual(expected_result, result,
-                         'multiply({}, {}) expected {} but got {}'.format(a, b, expected_result, result))
 
-        a = 1
-        b = 1
-        expected_result = 1
-        result = multiplier.Multiplier.multiply(a, b)
-        self.assertEqual(expected_result, result,
-                         'multiply({}, {}) expected {} but got {}'.format(a, b, expected_result, result))
+        for test_data in self.test_datas:
+            # module multiplier, class Multiplier, method multiply(a, b)
+            result = multiplier.Multiplier.multiply(test_data[self.multiplicand_index],
+                                                    test_data[self.multiplier_index])
+            self.assertEqual(test_data[self.expected_result_index], result,
+                            'multiply({}, {}) expected {} but got {}'.format(test_data[self.multiplicand_index],
+                                                                             test_data[self.multiplier_index],
+                                                                             test_data[self.expected_result_index],
+                                                                             result))
 
     def test_multiply_iterative(self):
         a = 7
