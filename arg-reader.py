@@ -8,10 +8,17 @@ import argparse
 
 def main():
     '''
-    Read arguments from a file
+    For help, use argument -h
+    $ ./arg-reader.py -h
+    To specify an argument, prefix with -
+    $ ./arg-reader.py -animalbig hippo -animalsmall fly
+    To read arguments from a file, prefix file name with @
+    $ ./arg-reader.py @args2.txt
+    To specify arguments from command line and from a file
+    $ ./arg-reader.py @args.txt -animalbig hippo
     '''
 
-    parser = argparse.ArgumentParser(description='Script reads arguments from a file. Type $ ./arg-reader.py @argsfilename e.g. $ ./arg-reader.py @args.txt',
+    parser = argparse.ArgumentParser(description='To read arguments from a file, prefix file name with @ e.g. $ ./arg-reader.py @args.txt -animalbig hippo',
                                     fromfile_prefix_chars='@',
                                     )
 
