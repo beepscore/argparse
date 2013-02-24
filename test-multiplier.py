@@ -29,18 +29,21 @@ class TestMultiplier(unittest.TestCase):
             result = multiplier.Multiplier.multiply(test_data[self.multiplicand_index],
                                                     test_data[self.multiplier_index])
             self.assertEqual(test_data[self.expected_result_index], result,
-                            'multiply({}, {}) expected {} but got {}'.format(test_data[self.multiplicand_index],
-                                                                             test_data[self.multiplier_index],
-                                                                             test_data[self.expected_result_index],
-                                                                             result))
+                             'multiply({}, {}) expected {} but got {}'.format(test_data[self.multiplicand_index],
+                                                                              test_data[self.multiplier_index],
+                                                                              test_data[self.expected_result_index],
+                                                                              result))
 
     def test_multiply_iterative(self):
-        a = 7
-        b = 9
-        expected_result = 63
-        # module multiplier, class Multiplier, method multiply_iterative(a, b)
-        result = multiplier.Multiplier.multiply_iterative(a, b)
-        self.assertEqual(expected_result, result,
-                         'multiply_iterative({}, {}) expected {} but got {}'.format(a, b, expected_result, result))
+
+        for test_data in self.test_datas:
+            # module multiplier, class Multiplier, method multiply_iterative(a, b)
+            result = multiplier.Multiplier.multiply_iterative(test_data[self.multiplicand_index],
+                                                              test_data[self.multiplier_index])
+            self.assertEqual(test_data[self.expected_result_index], result,
+                             'multiply_iterative({}, {}) expected {} but got {}'.format(test_data[self.multiplicand_index],
+                                                                                        test_data[self.multiplier_index],
+                                                                                        test_data[self.expected_result_index],
+                                                                                        result))
 
 if __name__ == "__main__": unittest.main()
