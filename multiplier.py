@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-class multiplier():
+class Multiplier():
     '''
     Multiply two numbers
     '''
