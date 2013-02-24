@@ -31,10 +31,12 @@ def main():
                         help = 'integer to multiply by')
 
     arguments = parser.parse_args()
-    print(arguments)
-    print(arguments.multiplicand)
-    print(arguments.multiplier)
-    print(arguments.multiplicand * arguments.multiplier)
+
+    multiply_result = multiply(arguments.multiplicand, arguments.multiplier)
+    print(arguments.multiplicand, 'times', arguments.multiplier, 'equals', multiply_result)
+
+def multiply(a, b):
+    return (a * b)
 
 if __name__ == "__main__": main()
 
