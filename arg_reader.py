@@ -14,13 +14,13 @@ def main():
     '''
 
     parser = argparse.ArgumentParser(description='''    For help, use argument -h
-    $ ./arg-reader.py -h
+    $ ./arg_reader.py -h
     To specify an argument, prefix with -
-    $ ./arg-reader.py -animalbig hippo -animalsmall fly
+    $ ./arg_reader.py -animalbig hippo -animalsmall fly
     To read arguments from a file, prefix file name with @
-    $ ./arg-reader.py @args2.txt
+    $ ./arg_reader.py @args2.txt
     To specify arguments from command line and from a file
-    $ ./arg-reader.py @args.txt -animalbig hippo''',
+    $ ./arg_reader.py @args.txt -animalbig hippo''',
                                     fromfile_prefix_chars='@',
                                     formatter_class=RawTextHelpFormatter,
                                     )
