@@ -36,3 +36,26 @@ class Multiplier():
 
         return result
 
+
+    def is_power_of_two(an_integer):
+        '''
+        a must be integer
+        '''
+
+        if an_integer = 0
+            return False
+
+        if an_integer < 0
+            is_an_integer_positive = False
+            abs_an_integer = -1 * an_integer
+        else
+            is_an_integer_positive = True
+            abs_an_integer = an_integer
+
+        current_power = 0
+        while (2^current_power) <= abs_an_integer:
+            if ((abs_an_integer == (2^current_power)):
+                 return True
+
+        return result
+
